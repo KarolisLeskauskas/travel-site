@@ -1,26 +1,2 @@
-var gulp = require("gulp");
-var watch = require("gulp-watch");
-
-gulp.task("default", function(){
-	console.log("Gulp task created");
-});
-
-gulp.task("html", function(){
-	console.log("something useful happens to your html")
-});
-
-gulp.task("styles", function(){
-	console.log("something useful happens to your css(Sass or PostCSS)")
-});
-
-gulp.task("watch", function(){
-	
-	watch("./app/index.html", function(){
-		gulp.start("html");
-	});
-
-	watch("./app/assets/styles/**/*.css", function(){
-		gulp.start("styles");
-	});
-
-})
+require("./gulp/tasks/styles");
+require("./gulp/tasks/watch");
