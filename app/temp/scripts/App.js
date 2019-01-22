@@ -11407,11 +11407,13 @@ var StickyHeader = function () {
 			new Waypoint({
 				element: this.headerTriggerElement[0],
 				handler: function handler(direction) {
-					if (direction == "down") {
-						that.siteHeader.addClass("site-header--dark");
-					} else {
-						that.siteHeader.removeClass("site-header--dark");
-					}
+					/*if (direction == "down") {
+     	that.siteHeader.addClass("site-header--dark");
+     } else {
+     	that.siteHeader.removeClass("site-header--dark");
+     }*/
+					//ES6:
+					direction == "down" ? that.siteHeader.addClass("site-header--dark") : that.siteHeader.removeClass("site-header--dark");
 				}
 			});
 		}

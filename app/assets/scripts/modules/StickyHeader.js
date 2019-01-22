@@ -30,11 +30,15 @@ class StickyHeader {
 		new Waypoint({
 			element: this.headerTriggerElement[0],
 			handler: function(direction) {
-				if (direction == "down") {
+				/*if (direction == "down") {
 					that.siteHeader.addClass("site-header--dark");
 				} else {
 					that.siteHeader.removeClass("site-header--dark");
-				}
+				}*/
+				//ES6:
+				direction == "down" ? 
+				that.siteHeader.addClass("site-header--dark") : 
+				that.siteHeader.removeClass("site-header--dark")
 			}
 		});
 	}
